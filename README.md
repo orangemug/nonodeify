@@ -1,7 +1,7 @@
 # nonodeify
 Really simple helper when you don't have a `nodeify` in your promise chain.
 
-[![Build Status](https://travis-ci.org/orangemug/nonodeify.svg?branch=master)](https://travis-ci.org/orangemug/nonodeify)
+[![circleci](https://circleci.com/gh/orangemug/nonodeify.png?style=shield)](https://circleci.com/gh/orangemug/nonodeify)
 [![Code Climate](https://codeclimate.com/github/orangemug/nonodeify/badges/gpa.svg)](https://codeclimate.com/github/orangemug/nonodeify) 
 [![Dependency Status](https://david-dm.org/orangemug/nonodeify.svg)](https://david-dm.org/orangemug/nonodeify)
 [![Dev Dependency Status](https://david-dm.org/orangemug/nonodeify/dev-status.svg)](https://david-dm.org/orangemug/nonodeify#info=devDependencies)
