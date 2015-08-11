@@ -22,4 +22,4 @@ Requires `Promise` globally
 
 
 ## License
-MIT
+[MIT](LICENSE)
