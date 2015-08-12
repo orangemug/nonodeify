@@ -1,4 +1,6 @@
 # nonodeify
+![stability-unstable](https://img.shields.io/badge/stability-unstable-yellow.svg)
+
 Really simple helper when you don't have a `nodeify` in your promise chain.
 
 [![circleci](https://circleci.com/gh/orangemug/nonodeify.png?style=shield)](https://circleci.com/gh/orangemug/nonodeify)
