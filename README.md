@@ -20,7 +20,10 @@ The function generates a `then` and `catch` handler from a normal callback style
         .catch(callback.catch);
     }
 
-Requires `Promise` globally
+The above requires `Promise` globally, if you want to provide a local polyfill use
+
+    var nonodeify = require("nonodeify/generate")(Promise);
+
 
 
 ## License
