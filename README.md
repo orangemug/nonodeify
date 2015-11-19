@@ -1,11 +1,15 @@
 # nonodeify
-![stability-unstable](https://img.shields.io/badge/stability-unstable-yellow.svg)
-
 Really simple helper when you don't have a `nodeify` in your promise chain.
 
-[![circleci](https://circleci.com/gh/orangemug/nonodeify.png?style=shield)](https://circleci.com/gh/orangemug/nonodeify)
-[![Dependency Status](https://david-dm.org/orangemug/nonodeify.svg)](https://david-dm.org/orangemug/nonodeify)
-[![Dev Dependency Status](https://david-dm.org/orangemug/nonodeify/dev-status.svg)](https://david-dm.org/orangemug/nonodeify#info=devDependencies)
+[![stability-unstable](https://img.shields.io/badge/stability-unstable-yellow.svg)][stability]
+[![circleci](https://circleci.com/gh/orangemug/nonodeify.png?style=shield)][circleci]
+[![Dependency Status](https://david-dm.org/orangemug/nonodeify.svg)][dm-prod]
+[![Dev Dependency Status](https://david-dm.org/orangemug/nonodeify/dev-status.svg)][dm-dev]
+
+[stability]: https://github.com/orangemug/stability-badges#unstable
+[circleci]:  https://circleci.com/gh/orangemug/nonodeify
+[dm-prod]:   https://david-dm.org/orangemug/nonodeify
+[dm-dev]:    https://david-dm.org/orangemug/nonodeify#info=devDependencies
 
 ## Usage
 The function generates a `then` and `catch` handler from a normal callback style function.
