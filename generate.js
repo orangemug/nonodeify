@@ -26,21 +26,26 @@ module.exports = function(Promise) {
       catch: 0
     };
 
-    return {
-      then: function(data) {
-        called["then"]++;
-        if(done && check(called)) {
-          done(undefined, data);
-        }
-        return Promise.resolve(data);
-      },
-      catch: function(err) {
-        called["catch"]++;
-        if(done && check(called)) {
-          done(err);
-        }
-        return Promise.reject(err);
-      }
+    var fn = function() {
+      return done.apply(this, arguments);
     };
+
+    fn.then = function(data) {
+      called["then"]++;
+      if(done && check(called)) {
+        done(undefined, data);
+      }
+      return Promise.resolve(data);
+    };
+
+    fn.catch = function(err) {
+      called["catch"]++;
+      if(done && check(called)) {
+        done(err);
+      }
+      return Promise.reject(err);
+    }
+
+    return fn;
   };
 };
