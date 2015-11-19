@@ -44,7 +44,7 @@ Promise.resolve()
     assert.equal(res, "success")
   });
 
-// Promise success
+// Promise error
 Promise.reject()
   .then(callback.then)
   .then(function(res) {
