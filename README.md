@@ -1,12 +1,12 @@
 # nonodeify
 Really simple helper when you don't have a `nodeify` in your promise chain.
 
-[![stability-unstable](https://img.shields.io/badge/stability-unstable-yellow.svg)][stability]
+[![stability-stable](https://img.shields.io/badge/stability-stable-green.svg)][stability]
 [![circleci](https://circleci.com/gh/orangemug/nonodeify.png?style=shield)][circleci]
 [![Dependency Status](https://david-dm.org/orangemug/nonodeify.svg)][dm-prod]
 [![Dev Dependency Status](https://david-dm.org/orangemug/nonodeify/dev-status.svg)][dm-dev]
 
-[stability]: https://github.com/orangemug/stability-badges#unstable
+[stability]: https://github.com/orangemug/stability-badges#stable
 [circleci]:  https://circleci.com/gh/orangemug/nonodeify
 [dm-prod]:   https://david-dm.org/orangemug/nonodeify
 [dm-dev]:    https://david-dm.org/orangemug/nonodeify#info=devDependencies
