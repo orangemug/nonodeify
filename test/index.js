@@ -6,6 +6,18 @@ var nonodeifyGenerate = require("../generate");
 
 describe("nonodeify", function() {
   describe("valid usage", function() {
+    it("should wrap original callback", function() {
+      var calledWith;
+      function fn() {
+        calledWith = Array.prototype.slice.call(arguments);
+      };
+
+      var wrapped = nonodeify(fn);
+      wrapped(1, 2, 3);
+
+      assert.deepEqual(calledWith, [1, 2, 3])
+    })
+
     it("should pass no err arg success", function() {
       var calledWith;
       var input = {foo: "bar"};
