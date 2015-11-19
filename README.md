@@ -12,22 +12,52 @@ Really simple helper when you don't have a `nodeify` in your promise chain.
 [dm-dev]:    https://david-dm.org/orangemug/nonodeify#info=devDependencies
 
 ## Usage
-The function generates a `then` and `catch` handler from a normal callback style function.
+The function generates a `then` and `catch` handler from a normal callback style function, whilst also wrapping the original function.
 
-    var nonodeify = require("nonodeify");
+So first off wrap your callback
 
-    function foo(callback) {
-      callback = nonodeify(callback);
+```js
+var nonodeify = require("nonodeify");
 
-      someFnReturningPromise()
-        .then(callback.then)
-        .catch(callback.catch);
-    }
+function callback(err) {
+  return (err ? "error" : "success");
+}
+
+callback = nonodeify(callback);
+```
+
+The `callback` will still act as a normal function (as before)
+
+```js
+// Normal usage
+assert.equal(callback(), "success");
+assert.equal(callback("err"), "error");
+```
+
+However you'll also get `then` and `catch` methods which return Promises after calling the original callback method
+
+```js
+// Promise success
+Promise.resolve()
+  .then(callback.then)
+  .then(function(res) {
+    assert.equal(res, "success")
+  });
+
+// Promise success
+Promise.reject()
+  .then(callback.then)
+  .then(function(res) {
+    assert.equal(res, "error")
+  });
+```
 
 The above requires `Promise` globally, if you want to provide a local polyfill use
 
-    var nonodeify = require("nonodeify/generate")(Promise);
-
+```js
+var Bluebird = require("bluebird");
+var nonodeify = require("nonodeify/generate")(Bluebird);
+```
 
 
 ## License

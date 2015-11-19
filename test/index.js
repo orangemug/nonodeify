@@ -2,6 +2,7 @@ var assert            = require("assert");
 var Bluebird          = require("bluebird");
 var nonodeify         = require("../");
 var nonodeifyGenerate = require("../generate");
+var readmeTester      = require("readme-tester");
 
 
 describe("nonodeify", function() {
@@ -115,3 +116,11 @@ describe("nonodeify#generate", function() {
   });
 });
 
+describe("README", function() {
+  it("should show no errors", function(done) {
+    readmeTester(__dirname+"/../", function(err) {
+      assert.ifError(err);
+      done();
+    });
+  });
+});
